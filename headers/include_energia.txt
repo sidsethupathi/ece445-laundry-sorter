@@ -1,0 +1,29 @@
+#define LED0 P2_0
+#define LED1 P2_1
+#define START_BTN P4_5
+#define MODE_0 P4_4
+#define MODE_1 P3_5
+#define IR_OUT P7_3
+
+#define PWM_0 P1_1
+#define PWM_1 P1_2
+#define PWM_2 P1_3
+#define PWM_3 P1_4
+#define PWM_4 P1_5
+
+#define LCD_RS P7_7
+#define LCD_EN P7_6
+#define LCD_D4 P7_5
+#define LCD_D5 P7_4
+#define LCD_D6 P5_7
+#define LCD_D7 P5_6
+
+#define Serial Serial1
+
+#define LED1_ON() digitalWrite(LED1, HIGH);
+#define LED1_OFF() digitalWrite(LED1, LOW);
+#define LED0_ON() digitalWrite(LED0, HIGH);
+#define LED0_OFF() digitalWrite(LED0, LOW);
+
+#define JOINT_DELAY 50
+#define JOINT_SKIP 1
