@@ -30,6 +30,8 @@
 #define MODE_1 P3_5
 #define IR_OUT P7_3
 
+#define JOINT_DELAY 30
+#define JOINT_SKIP 1
 
 Pixy pixy;
 LiquidCrystal lcd(P7_7, P7_6, P7_5, P7_4, P5_7, P5_6);
@@ -68,7 +70,7 @@ void setup()
   pinMode(MODE_1, INPUT);
   pinMode(IR_OUT, INPUT);
   
-  pixy.init();
+  //pixy.init();
   
   claw.attach(PWM_4);
   wrist.attach(PWM_3);
@@ -100,7 +102,8 @@ void loop()
     Serial1.println(sensorVal);
   }
   
-  blocks = pixy.getBlocks();
+  blocks = 0;
+  //blocks = pixy.getBlocks();
   if(blocks) {
     sprintf(buf, "Detected %d:\n", blocks);
     Serial1.print(buf);
